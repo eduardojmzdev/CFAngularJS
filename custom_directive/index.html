@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CustomDirectives">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" type="text/css" href="autocomplete-jquery-ui.structure.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+
+	 <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
+
+	
+	<!-- <script type="text/javascript" src="autocomplete-jquery-ui.js"></script> -->
+</head>
+
+<body ng-controller="appCtrl">
+	<input type="text" name="" my-autocomplete="repos">
+	<li ng-cloak>
+		<ul ng-repeat="repo in posts" ng-hide="main_repo && main_repo!=repo.name">
+			<!-- <img ng-src="{{repo.owner.avatar_url}}" alt=""> -->
+			<div  back-img="{{repo.owner.avatar_url}}"></div>
+			<h1 class="inline-block">{{repo.name}}</h1>			
+		</ul>		
+	</li>
+	
+	<input type="button" name="" ng-click="main_repo=NULL" value="Limpiar">
+	<script src="app.js" type="text/javascript"></script>
+</body>
+</html>

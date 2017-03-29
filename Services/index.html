@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ToDoList">
+<head>
+	<meta charset="UTF-8">
+	<title>Mi Primer AngularJS</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="ToDoListController">
+	<!-- <input type="text" ng-model="nuevoPost.title" placeholder="Titulo">
+	<input type="text" ng-model="nuevoPost.body" placeholder="Cuerpo">
+	<button ng-click="addPost()">Enviar</button> -->
+
+	<ul>
+		<li ng-repeat="act in todo">
+			<h2>{{act.descripcion}}</h2>
+			<p>{{act.fecha | date: 'short'}} <a href="#" ng-click="removeItem(act)" style="background: red ; text-decoration: none">X</a></p>
+						
+		</li>
+	</ul>
+	
+	<form ng-submit='addAct()'>
+		<input type="text" ng-model="nuevaAct.descripcion" placeholder="Titulo" required>
+		<input type="date" ng-model="nuevaAct.fecha" placeholder="Cuerpo" required>
+		<input type="submit" value="Guardar">
+	</form>
+	<button ng-click="clean()">Limpiar</button>
+
+	<script src="angular.min.js" type="text/javascript"></script>
+	<script src="bower_components/angular-local-storage/angular-local-storage.min.js"></script>	 
+	<script src="script1.js" type="text/javascript"></script>
+</body>
+</html>

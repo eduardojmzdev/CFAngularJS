@@ -1,0 +1,12 @@
+<input type="text" name="" my-autocomplete="repos">
+<li ng-cloak>
+	<ul ng-repeat="repo in posts" ng-hide="main_repo && main_repo!=repo.name ">
+		<a href="#!/repo/{{repo.name}}">
+			<!-- <img ng-src="{{repo.owner.avatar_url}}" alt=""> -->
+			<div  back-img="{{repo.owner.avatar_url}}"></div>
+			<h1 class="inline-block">{{repo.name}}</h1>
+		</a>			
+	</ul>		
+</li>
+
+<input type="button" name="" ng-click="main_repo=NULL" value="Limpiar">

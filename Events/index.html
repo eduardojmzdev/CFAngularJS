@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Events</title>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+
+	<style>
+		.change{
+			background-color: green;
+			color: #fff;
+		}
+		.no_change{
+			background-color: blue;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<button ng-mouseover="bandera = true" ng-mouseout="bandera =  false" ng-click="band=!band">Hover Me</button>
+	<span ng-hide="bandera"><-Click Me</span>
+
+	<h2>{{bandera}}</h2>
+
+	<h2 ng-show="band">"Hola Mundo"</h2>
+
+	<button ng-click="cls=!cls" ng-class="{'change':cls,'no_change':!cls}">Change my color</button>
+	
+	
+</body>
+</html>

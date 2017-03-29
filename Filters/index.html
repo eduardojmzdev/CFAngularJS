@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Filters</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+</head>
+<body ng-controller="FiltersController">
+	{{mi_html | removeHTML}}
+
+	<br>
+
+	{{saludo | json}}
+
+	<br>
+		
+	{{costo | currency:'#'}}
+	
+
+
+	<script src="controller.js" type="text/javascript"></script>
+</body>
+</html>
